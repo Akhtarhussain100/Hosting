@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Akhtar Hussain | Creative Professional</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+:root{
+    --dark:#003047;
+    --orange:#F38720;
+    --blue:#29AFD2;
+    --light:#f4f6f8;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI, sans-serif;
+}
+
+body{
+    background:var(--light);
+}
+
+.container{
+    max-width:1150px;
+    margin:30px auto;
+    background:#fff;
+    display:grid;
+    grid-template-columns:320px 1fr;
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+/* SIDEBAR */
+.sidebar{
+    background:var(--dark);
+    color:#fff;
+    padding:30px;
+}
+
+.profile{
+    text-align:center;
+}
+.profile img{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    border:5px solid var(--orange);
+    object-fit:cover;
+}
+.profile h2{
+    margin-top:15px;
+}
+.profile p{
+    color:var(--blue);
+    font-size:14px;
+}
+
+.title{
+    margin:30px 0 10px;
+    color:var(--orange);
+    font-weight:700;
+    border-bottom:1px solid rgba(255,255,255,.3);
+    padding-bottom:6px;
+}
+
+.contact li{
+    list-style:none;
+    margin:10px 0;
+    font-size:14px;
+}
+.contact i{
+    color:var(--blue);
+    margin-right:8px;
+}
+
+/* LANGUAGES */
+.languages{
+    font-size:14px;
+}
+.lang-head,.lang-row{
+    display:grid;
+    grid-template-columns:1fr 120px;
+    padding:6px 0;
+}
+.lang-head{
+    font-weight:700;
+    color:#29AFD2;
+}
+.lang-row{
+    border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+/* SOCIAL */
+.social{
+    margin-top:25px;
+    text-align:center;
+}
+.social a{
+    color:#fff;
+    font-size:22px;
+    margin:0 10px;
+    transition:.3s;
+}
+.social a:hover{
+    color:var(--orange);
+}
+
+/* MAIN */
+.main{
+    padding:40px;
+}
+
+.header h1{
+    font-size:34px;
+    color:var(--dark);
+}
+.header span{
+    color:var(--orange);
+}
+.header p{
+    margin-top:5px;
+    color:#555;
+    font-weight:500;
+}
+
+/* ABOUT */
+.about{
+    margin:25px 0;
+    line-height:1.8;
+    color:#444;
+}
+
+/* CARDS */
+.card{
+    margin-bottom:35px;
+}
+.card h3{
+    color:var(--dark);
+    border-left:4px solid var(--orange);
+    padding-left:10px;
+    margin-bottom:15px;
+}
+
+/* SKILLS */
+.skill{
+    margin-bottom:12px;
+}
+.skill span{
+    font-size:14px;
+    font-weight:600;
+}
+.bar{
+    height:8px;
+    background:#ddd;
+    border-radius:5px;
+    overflow:hidden;
+    margin-top:4px;
+}
+.bar div{
+    height:100%;
+    background:linear-gradient(90deg,var(--orange),var(--blue));
+}
+
+/* TABLE */
+table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:14px;
+}
+th,td{
+    padding:10px;
+    border-bottom:1px solid #ddd;
+}
+th{
+    background:var(--blue);
+    color:#fff;
+    text-align:left;
+}
+
+/* PORTFOLIO CTA */
+.portfolio{
+    background:linear-gradient(135deg,var(--dark),var(--blue));
+    padding:25px;
+    border-radius:12px;
+    color:#fff;
+    text-align:center;
+}
+.portfolio a{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 25px;
+    background:var(--orange);
+    color:#fff;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:600;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .container{
+        grid-template-columns:1fr;
+    }
+}
+
+
+/* TOOL ROW */
+/* ================= TOOLS EXPERIENCE ================= */
+
+/* ================= TOOLS EXPERIENCE ================= */
+
+.tools-section{
+    margin-bottom:35px;
+}
+
+/* TITLE */
+.section-title{
+    color:var(--dark);
+    border-left:4px solid var(--orange);
+    padding-left:10px;
+    margin-bottom:12px;
+}
+
+/* ROW */
+.tool-line{
+    display:grid;
+    grid-template-columns:24px 2fr 1fr 1fr;
+    align-items:center;
+    gap:8px;
+    padding:5px 0;
+    font-size:13px;
+    border-bottom:1px solid #e3e3e3;
+}
+
+/* ICONS */
+.tool-line i,
+.tool-icon{
+    width:24px;
+    height:24px;
+    font-size:24px;
+}
+
+/* TEXT */
+.tool-name{
+    font-weight:600;
+    color:var(--dark);
+    white-space:nowrap;
+}
+
+.tool-since,
+.tool-level{
+    font-size:12px;
+    white-space:nowrap;
+}
+
+/* HEADING */
+.tool-head{
+    font-weight:700;
+    font-size:12px;
+    color:var(--dark);
+    border-bottom:2px solid var(--orange);
+}
+
+/* LEVEL COLORS */
+.ultra{ color:#009a5a; }
+.expert{ color:#009a5a; }
+.advanced{ color:#2980b9; }
+.intermediate{ color:#555; }
+
+/* BRAND COLORS */
+.html{ color:#E34F26; }
+.sheets{ color:#0F9D58; }
+.excel{ color:#217346; }
+.premiere{ color:#6d5dfc; }
+
+/* MOBILE FIX */
+@media(max-width:600px){
+    .tool-line{
+        grid-template-columns:20px 2.2fr 1fr 1fr;
+        font-size:12px;
+        gap:6px;
+    }
+
+    .tool-line i,
+    .tool-icon{
+        width:20px;
+        height:20px;
+        font-size:20px;
+    }
+
+    .tool-since,
+    .tool-level{
+        font-size:11px;
+    }
+}
+
+.contact-link{
+    color:#29AFD2;   /* professional blue */
+    text-decoration:none;
+    font-weight:500;
+}
+
+.contact-link:hover{
+    text-decoration:underline;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <div class="profile">
+        <img src="https://github.com/Akhtarhussain100/Hosting/raw/main/my-branding/my-dp.jpg">
+        <h2>Akhtar Hussain</h2>
+        <p>Creative Designer & Technical Professional</p>
+    </div>
+
+    <div class="title">Contact</div>
+<ul class="contact">
+    <li>
+        <i class="fa fa-phone"></i>
+        <a href="tel:+923209717126" class="contact-link">
+            0320-9717126
+        </a>
+    </li>
+
+    <li>
+        <i class="fa fa-envelope"></i>
+        <a href="mailto:infoakhtar313@gmail.com" class="contact-link">
+            infoakhtar313@gmail.com
+        </a>
+    </li>
+
+    <li>
+        <i class="fa fa-location-dot"></i>
+        Peshawar, Pakistan
+    </li>
+</ul>
+
+
+    <div class="title">Languages</div>
+    <div class="languages">
+        <div class="lang-head"><span>Language</span><span>Status</span></div>
+        <div class="lang-row"><span>Urdu</span><span>Fluent</span></div>
+        <div class="lang-row"><span>Punjabi</span><span>Fluent</span></div>
+        <div class="lang-row"><span>Pashto</span><span>Native</span></div>
+        <div class="lang-row"><span>English (Conv.)</span><span>Fluent</span></div>
+        <div class="lang-row"><span>English (Live)</span><span>Intermediate</span></div>
+    </div>
+
+    <div class="social">
+        <a href="https://wa.me/923209717126"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://web.facebook.com/akhtartech31"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.behance.net/akhtartech313"><i class="fab fa-behance"></i></a>
+        <a href="https://www.linkedin.com/in/akhtartech313/"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/akhtartech313/"><i class="fab fa-instagram"></i></a>
+    </div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+<div class="header">
+    <h1>Akhtar <span>Hussain</span></h1>
+    <p>Graphic Designer | Motion Graphics | Data & Web Solutions</p>
+</div>
+
+<p class="about">
+Creative professional with 4+ years of hands-on experience in graphic design,
+specializing in branding, marketing creatives, motion graphics, and digital visuals.
+I help businesses communicate clearly through impactful design, structured data
+management, and modern web solutions.
+</p>
+
+<div class="card">
+<h3>Core Skills</h3>
+
+<div class="skill">
+    <span>Graphic Design (Professional)</span>
+    <div class="bar"><div style="width:95%"></div></div>
+</div>
+
+<div class="skill">
+    <span>Animation & Motion Graphics (Advanced)</span>
+    <div class="bar"><div style="width:85%"></div></div>
+</div>
+
+<div class="skill">
+    <span>Data Management (Advanced)</span>
+    <div class="bar"><div style="width:80%"></div></div>
+</div>
+
+<div class="skill">
+    <span>Web Development (Intermediate)</span>
+    <div class="bar"><div style="width:65%"></div></div>
+</div>
+
+</div>
+
+
+
+<div class="tools-section">
+    <h3 class="section-title">Tools Experience</h3>
+
+    <!-- HEADING -->
+    <div class="tool-line tool-head">
+        <span></span>
+        <span>Tool</span>
+        <span>Use Since</span>
+        <span>Status</span>
+    </div>
+
+    <!-- Adobe Illustrator -->
+    <div class="tool-line">
+        <img src="https://github.com/Akhtarhussain100/Hosting/raw/main/genral-icons/illustrator.png" class="tool-icon" alt="">
+        <span class="tool-name">Adobe Illustrator</span>
+        <span class="tool-since">4 Years</span>
+        <span class="tool-level ultra">Expert</span>
+    </div>
+
+    <!-- Photoshop -->
+    <div class="tool-line">
+        <img src="https://github.com/Akhtarhussain100/Hosting/raw/main/genral-icons/photoshop.png" class="tool-icon" alt="">
+        <span class="tool-name">Adobe Photoshop</span>
+        <span class="tool-since">4 Years</span>
+        <span class="tool-level expert">Expert</span>
+    </div>
+
+    <!-- After Effects -->
+    <div class="tool-line">
+        <img src="https://github.com/Akhtarhussain100/Hosting/raw/main/genral-icons/after-effect.png" class="tool-icon" alt="">
+        <span class="tool-name">After Effects</span>
+        <span class="tool-since">2 Years</span>
+        <span class="tool-level advanced">Advanced</span>
+    </div>
+
+    <!-- Premiere Pro (FA) -->
+    <div class="tool-line">
+        <i class="fa-solid fa-film premiere"></i>
+        <span class="tool-name">Premiere Pro</span>
+        <span class="tool-since">6 Months</span>
+        <span class="tool-level intermediate">Intermediate</span>
+    </div>
+
+    <!-- Google Sheets -->
+    <div class="tool-line">
+        <i class="fa-solid fa-table sheets"></i>
+        <span class="tool-name">Google Sheets</span>
+        <span class="tool-since">2 Years</span>
+        <span class="tool-level advanced">Advanced</span>
+    </div>
+
+    <!-- Excel -->
+    <div class="tool-line">
+        <i class="fa-solid fa-file-excel excel"></i>
+        <span class="tool-name">MS Excel</span>
+        <span class="tool-since">6 Months</span>
+        <span class="tool-level intermediate">Intermediate</span>
+    </div>
+
+    <!-- HTML / CSS / JS -->
+    <div class="tool-line">
+        <i class="fa-brands fa-html5 html"></i>
+        <span class="tool-name">HTML / CSS / JS</span>
+        <span class="tool-since">6 Months</span>
+        <span class="tool-level intermediate">Intermediate</span>
+    </div>
+</div>
+
+
+
+
+<div class="card">
+<h3>Education</h3>
+<table>
+<tr><th>Degree</th><th>Board</th><th>Marks</th></tr>
+<tr><td>Matric (Additinoal)</td><td>Peshawar</td><td>216/400</td></tr>
+<tr><td>F.A (Additional)</td><td>Peshawar</td><td>481/850</td></tr>
+<tr><td>D.I.T</td><td>Peshawar</td><td>700/1000</td></tr>
+<tr><td>Dars-e-Nizami</td><td>Wifaq-ul-Madaris</td><td>818/1200</td></tr>
+</table>
+</div>
+
+<div class="portfolio">
+<h3>View My Portfolio</h3>
+<p>Explore real projects, branding work, and creative designs on Behance.</p>
+<a href="https://www.behance.net/akhtartech313" target="_blank">Visit Behance Portfolio</a>
+</div>
+
+</div>
+</div>
+
+</body>
+</html>
